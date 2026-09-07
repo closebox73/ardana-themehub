@@ -217,6 +217,7 @@ def build_theme_entry(
         "version": metadata["version"],
         "author": metadata["author"],
         "fonts": metadata["fonts"],
+        "whats_new": False,
         "file": (
             f"themes/"
             f"{zip_path.name}"

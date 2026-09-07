@@ -1,0 +1,20 @@
+{
+    "themes": [
+        {
+            "name": "Thuban",
+            "version": "1.0",
+            "author": "Closebox73",
+            "fonts": [
+                "Feather.ttf",
+                "BebasNeue-Regular.ttf",
+                "Monoton-Regular.ttf",
+                "Fantasque-Sans-Mono-Nerd-Font.ttf",
+                "Inter-Regular.otf",
+                "Inter-Bold.otf"
+            ],
+            "whats_new": false,
+            "file": "themes/Thuban.zip",
+            "preview": "previews/Thuban.webp"
+        }
+    ]
+}
