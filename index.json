@@ -1,6 +1,18 @@
 {
     "themes": [
         {
+            "name": "Ruchbah",
+            "version": "1.0",
+            "author": "Closebox73",
+            "fonts": [
+                "Beckman-Free.otf",
+                "Anurati-Regular.otf"
+            ],
+            "whats_new": false,
+            "file": "themes/Ruchbah.zip",
+            "preview": "previews/Ruchbah.webp"
+        },
+        {
             "name": "Thuban",
             "version": "1.0",
             "author": "Closebox73",
