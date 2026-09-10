@@ -1,6 +1,18 @@
 {
     "themes": [
         {
+            "name": "Alcyone",
+            "version": "1.0",
+            "author": "Closebox73",
+            "fonts": [
+                "monofonto rg.otf",
+                "BebasNeue-Regular.ttf"
+            ],
+            "whats_new": false,
+            "file": "themes/Alcyone.zip",
+            "preview": "previews/Alcyone.webp"
+        },
+        {
             "name": "Ruchbah",
             "version": "1.0",
             "author": "Closebox73",
