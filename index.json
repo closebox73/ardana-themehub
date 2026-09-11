@@ -25,6 +25,19 @@
             "preview": "previews/Ruchbah.webp"
         },
         {
+            "name": "Spica",
+            "version": "1.0",
+            "author": "Closebox73",
+            "fonts": [
+                "Quicksand-Bold.ttf",
+                "RobotoCondensed-Regular.ttf",
+                "RobotoCondensed-Bold.ttf"
+            ],
+            "whats_new": false,
+            "file": "themes/Spica.zip",
+            "preview": "previews/Spica.webp"
+        },
+        {
             "name": "Thuban",
             "version": "1.0",
             "author": "Closebox73",
