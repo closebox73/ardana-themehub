@@ -13,6 +13,18 @@
             "preview": "previews/Alcyone.webp"
         },
         {
+            "name": "Dnoces",
+            "version": "1.0",
+            "author": "Closebox73",
+            "fonts": [
+                "Outfit-Regular.ttf",
+                "Outfit-Bold.ttf"
+            ],
+            "whats_new": false,
+            "file": "themes/Dnoces.zip",
+            "preview": "previews/Dnoces.webp"
+        },
+        {
             "name": "Ruchbah",
             "version": "1.0",
             "author": "Closebox73",
