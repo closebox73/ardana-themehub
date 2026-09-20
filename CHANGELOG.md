@@ -1,29 +1,31 @@
-## [1.2] Delphinus - 2026-09-18
+## [1.5] Delphinus - 2026-09-19
 
 ### Added
 
-- Added Reset to Default support for theme configuration.
-- Added automatic detection when the current configuration differs from the default configuration.
-- Added default configuration support for colors, scale, and geometry.
-- Added a descriptive note below the Reset to Default button.
+- Added automatic UpdateCard asset refresh after a successful update.
+- Added automatic refresh of the Ardana application icon cache after an update.
+- Added **Stop All** button to the Dashboard for stopping all currently running Ardana theme configurations.
+- Added **Autostart** settings to the Settings page.
 
 ### Changed
 
-- Moved the Reset to Default section to the bottom of the scrollable Customize content.
-- Apply now becomes active when valid configuration changes are detected.
-- Reset to Default now becomes active when the current configuration differs from the default configuration.
-- Reset restores colors, scale, and geometry from the theme's default configuration.
-- Geometry restoration includes alignment, `gap_x`, `gap_y`, minimum dimensions, and maximum dimensions.
-- Scale calculation now uses 1366px width as the 1.00 baseline.
-- Corrected scaling so 1920px corresponds to a scale of 1.40.
+- UpdateCard now reloads `assets/logo.png` after the update has been installed.
+- UpdateCard now refreshes the displayed version information after installation.
+- GTK icon cache is rebuilt after updated Ardana icons are installed.
+- Desktop application metadata is refreshed after an update.
+- Moved the **Autostart** toggle from the Dashboard to the Settings page.
+- Autostart settings are now managed from the Settings page while preserving the existing autostart mechanism.
+- Dashboard header now uses **Stop All** instead of the Autostart toggle.
+- Stop All only stops currently running Ardana theme configurations and does not remove their saved autostart entries.
+- Aligned the Settings page header and spacing with the existing About page layout.
 
 ### Fixed
 
-- Fixed the Reset section not being properly included in the Customize dialog scroll area.
-- Fixed the Apply button not reflecting pending configuration changes.
-- Fixed the Reset button not reflecting differences between the current configuration and `default.json`.
-- Fixed incorrect scale calculations for different display resolutions.
+- Fixed UpdateCard artwork not changing immediately after an update.
+- Fixed the new Ardana logo requiring ThemeHub to be restarted before it appeared.
+- Fixed the application icon cache not immediately reflecting updated Ardana icons.
+- Improved the Dashboard header layout by placing **Stop All** alongside the theme search control.
 
 ### Build
 
-- Build: `20260918`
+- Build: `20260919`
