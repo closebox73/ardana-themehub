@@ -25,6 +25,19 @@
             "preview": "previews/Dnoces.webp"
         },
         {
+            "name": "Graffias",
+            "version": "1.0",
+            "author": "Closebox73",
+            "fonts": [
+                "BPreplay.otf",
+                "BPreplayBold.otf",
+                "BebasNeue-Regular.ttf"
+            ],
+            "whats_new": false,
+            "file": "themes/Graffias.zip",
+            "preview": "previews/Graffias.webp"
+        },
+        {
             "name": "Ruchbah",
             "version": "1.1",
             "author": "Closebox73",
