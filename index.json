@@ -38,6 +38,17 @@
             "preview": "previews/Graffias.webp"
         },
         {
+            "name": "Mintaka",
+            "version": "1.0",
+            "author": "Closebox73",
+            "fonts": [
+                "BebasNeue-Regular.ttf"
+            ],
+            "whats_new": false,
+            "file": "themes/Mintaka.zip",
+            "preview": "previews/Mintaka.webp"
+        },
+        {
             "name": "Ruchbah",
             "version": "1.1",
             "author": "Closebox73",

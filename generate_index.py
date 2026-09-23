@@ -227,7 +227,6 @@ def build_theme_entry(
 
 
 def generate_index():
-
     required_dirs = [
         THEMES_DIR,
         FONTS_DIR,
@@ -235,17 +234,18 @@ def generate_index():
     ]
 
     for directory in required_dirs:
-
         if not directory.exists():
-
             print(
                 f"[ERROR] Directory not found: "
                 f"{directory.name}/"
             )
-
             sys.exit(1)
 
     theme_entries = []
+
+    # Keep a structured record of failures so we can show
+    # a useful summary at the end.
+    failures = []
 
     zip_files = sorted(
         THEMES_DIR.glob("*.zip"),
@@ -253,13 +253,11 @@ def generate_index():
     )
 
     if not zip_files:
-
         print(
             "[WARNING] No theme ZIP files found."
         )
 
     for zip_path in zip_files:
-
         print()
         print(
             f"[READ] {zip_path.name}"
@@ -270,12 +268,26 @@ def generate_index():
         )
 
         if not metadata:
+            failures.append(
+                (
+                    zip_path.name,
+                    "metadata.json tidak dapat dibaca "
+                    "atau tidak ditemukan",
+                )
+            )
             continue
 
         if not validate_metadata(
             metadata,
             zip_path,
         ):
+            failures.append(
+                (
+                    zip_path.name,
+                    "metadata.json tidak memenuhi "
+                    "field yang diperlukan",
+                )
+            )
             continue
 
         entry = build_theme_entry(
@@ -284,6 +296,39 @@ def generate_index():
         )
 
         if not entry:
+            # Determine the most likely reason for the failed entry.
+            theme_name = metadata.get(
+                "name",
+                zip_path.stem,
+            )
+
+            missing_fonts = [
+                font_name
+                for font_name in metadata.get("fonts", [])
+                if not (
+                    FONTS_DIR / font_name
+                ).exists()
+            ]
+
+            if missing_fonts:
+                reason = (
+                    "font tidak ditemukan: "
+                    + ", ".join(missing_fonts)
+                )
+            elif not find_preview(theme_name):
+                reason = (
+                    f"preview tidak ditemukan: "
+                    f"{theme_name}.webp"
+                )
+            else:
+                reason = "gagal membangun entry theme"
+
+            failures.append(
+                (
+                    zip_path.name,
+                    reason,
+                )
+            )
             continue
 
         theme_entries.append(
@@ -304,7 +349,6 @@ def generate_index():
         "w",
         encoding="utf-8",
     ) as file:
-
         json.dump(
             index,
             file,
@@ -314,13 +358,58 @@ def generate_index():
 
         file.write("\n")
 
+    total = len(zip_files)
+    success = len(theme_entries)
+    failed = len(failures)
+
     print()
+    print(
+        "════════════════════════════════════════"
+    )
+    print(
+        "RESUME"
+    )
+    print(
+        "════════════════════════════════════════"
+    )
+    print(
+        f"[INFO] Total ZIP    : {total}"
+    )
+    print(
+        f"[OK]   Berhasil     : {success}"
+    )
+    print(
+        f"[ERROR] Gagal       : {failed}"
+    )
+
+    if failures:
+        print()
+        print(
+            "[ERROR] Theme yang gagal:"
+        )
+
+        for filename, reason in failures:
+            print(
+                f"        - {filename}"
+            )
+            print(
+                f"          {reason}"
+            )
+
+    else:
+        print()
+        print(
+            "[OK] Semua theme berhasil diproses."
+        )
+
+    print(
+        "════════════════════════════════════════"
+    )
     print(
         "[DONE] index.json generated"
     )
-
     print(
-        f"[INFO] Total themes: "
+        f"[INFO] Total themes indexed: "
         f"{len(theme_entries)}"
     )
 
