@@ -61,6 +61,15 @@
             "preview": "previews/Ruchbah.webp"
         },
         {
+            "name": "Sargas",
+            "version": "1.0",
+            "author": "Closebox73",
+            "fonts": [],
+            "whats_new": false,
+            "file": "themes/Sargas.zip",
+            "preview": "previews/Sargas.webp"
+        },
+        {
             "name": "Spica",
             "version": "1.1",
             "author": "Closebox73",
