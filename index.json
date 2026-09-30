@@ -52,7 +52,11 @@
             "name": "Nashira",
             "version": "1.0",
             "author": "Closebox73",
-            "fonts": [],
+            "fonts": [
+                "Jost-Regular.ttf",
+                "Jost-Bold.ttf",
+                "Jaro-Regular.ttf"
+            ],
             "whats_new": false,
             "file": "themes/Nashira.zip",
             "preview": "previews/Nashira.webp"
@@ -73,7 +77,11 @@
             "name": "Sargas",
             "version": "1.0",
             "author": "Closebox73",
-            "fonts": [],
+            "fonts": [
+                "BebasNeue-Regular.ttf",
+                "Inter-Regular.otf",
+                "Inter-Bold.otf"
+            ],
             "whats_new": false,
             "file": "themes/Sargas.zip",
             "preview": "previews/Sargas.webp"
