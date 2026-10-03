@@ -13,6 +13,18 @@
             "preview": "previews/Alcyone.webp"
         },
         {
+            "name": "Botein",
+            "version": "1.0",
+            "author": "Closebox73",
+            "fonts": [
+                "Dosis-Regular.ttf",
+                "Dosis-Bold.ttf"
+            ],
+            "whats_new": false,
+            "file": "themes/Botein.zip",
+            "preview": "previews/Botein.webp"
+        },
+        {
             "name": "Dnoces",
             "version": "1.1",
             "author": "Closebox73",
