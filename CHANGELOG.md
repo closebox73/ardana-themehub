@@ -1,15 +1,11 @@
-## [1.7] Delphinus - 2026-09-30
-
-### Added
-
-- Added `whoami` to the System Provider to retrieve the current username.
-- Added `distro` to the System Provider to retrieve the Linux distribution name from `/etc/os-release`.
-- Added network connection status icons for Wi-Fi, wired, and disconnected states.
+## [2.0] Serpens - 2026-09-30
 
 ### Changed
 
-- System Provider now exposes username and distribution information through `theme.providers.system.get()`.
-- System identity information is loaded during provider initialization.
+- Updated the Weather Provider to detect latitude and longitude changes and reload weather data immediately when the location changes.
+- Updated **Stop All** to clear all saved autostart configurations from `~/.config/Ardana/autostart.json`.
+- **Stop All** now disables autostart and clears the saved theme configuration list after stopping all running Ardana themes.
+- Updated the Discover page subtitle to display the total number of themes available in the Ardana Theme Market.
 
 ### Build
 
