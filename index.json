@@ -50,6 +50,19 @@
             "preview": "previews/Graffias.webp"
         },
         {
+            "name": "Menkent",
+            "version": "1.0",
+            "author": "Closebox73",
+            "fonts": [
+                "Bungee-Regular.otf",
+                "Quicksand-Bold.ttf",
+                "Feather.ttf"
+            ],
+            "whats_new": false,
+            "file": "themes/Menkent.zip",
+            "preview": "previews/Menkent.webp"
+        },
+        {
             "name": "Mintaka",
             "version": "1.0",
             "author": "Closebox73",
