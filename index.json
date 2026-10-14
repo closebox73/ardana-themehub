@@ -50,6 +50,20 @@
             "preview": "previews/Graffias.webp"
         },
         {
+            "name": "Heze",
+            "version": "1.0",
+            "author": "Closebox73",
+            "fonts": [
+                "Beckman-Free.otf",
+                "Jost-Regular.ttf",
+                "Jost-Bold.ttf",
+                "Feather.ttf"
+            ],
+            "whats_new": false,
+            "file": "themes/Heze.zip",
+            "preview": "previews/Heze.webp"
+        },
+        {
             "name": "Menkent",
             "version": "1.0",
             "author": "Closebox73",
