@@ -77,6 +77,19 @@
             "preview": "previews/Menkent.webp"
         },
         {
+            "name": "Mesarthim",
+            "version": "1.0",
+            "author": "Closebox73",
+            "fonts": [
+                "Rubik-Bold.ttf",
+                "Outfit-Regular.ttf",
+                "Rubik-Regular.ttf"
+            ],
+            "whats_new": false,
+            "file": "themes/Mesarthim.zip",
+            "preview": "previews/Mesarthim.webp"
+        },
+        {
             "name": "Mintaka",
             "version": "1.0",
             "author": "Closebox73",
